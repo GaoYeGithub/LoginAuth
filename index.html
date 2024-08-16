@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Login Authentication</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="login_div" class="main_div">
+		<h3>
+			<center>Login Authentication</center>
+		</h3>
+		<input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login</button>
+    <br><button onclick="create()">Create Account</button>
+    <br><button onclick="anonymous()">Login Anonymously</button>
+    <br><button onclick="forgot()">Forgot Password?</button>
+    </div>
+    
+  </div>
+  <div id="user_div" class="loggedin_div">
+    <h3><center>YAYYY! You successfully logged-in using Firebase.....</center></h3>
+    <p id="user_para"></p>
+    <button id="user_veri" onclick="verification()">Verify Account</button><br>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+  apiKey: "AIzaSyC0AVBiUp3LgdzEna1YvNV1NUVr6Jl3CT8",
+  authDomain: "login-auth-532cc.firebaseapp.com",
+  projectId: "login-auth-532cc",
+  storageBucket: "login-auth-532cc.appspot.com",
+  messagingSenderId: "326708864916",
+  appId: "1:326708864916:web:ba31a5c960126e5e059181",
+  measurementId: "G-KJ32D5JFE3"
+};
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="script.js"></script>
+</body>
+</html>
